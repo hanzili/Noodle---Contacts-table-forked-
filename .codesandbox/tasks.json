@@ -1,0 +1,69 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "pnpm config set auto-install-peers true",
+      "command": "pnpm config set auto-install-peers true"
+    },
+    {
+      "name": "Install Dependencies",
+      "command": "pnpm install"
+    },
+    {
+      "name": "pnpm config set auto-install-peers true",
+      "command": "pnpm config set auto-install-peers true"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "dev": {
+      "name": "dev",
+      "command": "pnpm dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "build": {
+      "name": "build",
+      "command": "pnpm build"
+    },
+    "start": {
+      "name": "start",
+      "command": "pnpm start"
+    },
+    "lint": {
+      "name": "lint",
+      "command": "pnpm lint"
+    },
+    "format": {
+      "name": "format",
+      "command": "pnpm format"
+    },
+    "format:check": {
+      "name": "format:check",
+      "command": "pnpm format:check"
+    },
+    "typecheck": {
+      "name": "typecheck",
+      "command": "pnpm typecheck"
+    },
+    "db:generate": {
+      "name": "db:generate",
+      "command": "pnpm db:generate"
+    },
+    "db:push": {
+      "name": "db:push",
+      "command": "pnpm db:push"
+    },
+    "db:studio": {
+      "name": "db:studio",
+      "command": "pnpm db:studio"
+    },
+    "db:migrate": {
+      "name": "db:migrate",
+      "command": "pnpm db:migrate"
+    }
+  }
+}
