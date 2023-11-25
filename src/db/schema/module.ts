@@ -2,6 +2,7 @@ import { relations, sql } from "drizzle-orm";
 import { integer, text } from "drizzle-orm/sqlite-core";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
+import { contact } from "./contact";
 import { sqliteTable } from "./noodle_table";
 import { notebooks } from "./notebook";
 
@@ -26,6 +27,7 @@ export const moduleTable = sqliteTable("module", {
 
 export const moduleTableRelations = relations(moduleTable, ({ many }) => ({
   notebooks: many(notebooks),
+  contacts: many(contact),
 }));
 
 export const insertModuleSchema = createInsertSchema(moduleTable, {
